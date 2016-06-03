@@ -45,7 +45,7 @@ namespace Slutty_Veigar
 
             Q.SetSkillshot(0.25f, 70f, 2000f, false, SkillshotType.SkillshotLine);
             W.SetSkillshot(0.5f, 200f, int.MaxValue, false, SkillshotType.SkillshotCircle);
-            E.SetSkillshot(0.5f, 80f, int.MaxValue, false, SkillshotType.SkillshotCircle);
+            E.SetSkillshot(0.5f, 50f, float.MaxValue, false, SkillshotType.SkillshotCircle);
           //  Ew.SetSkillshot(0.5f, 50f, float.MaxValue, false, SkillshotType.SkillshotCircle);
             Printmsg("Veigar Assembly By Hoes Loaded");
             Printmsg1("Current Version: " + typeof(Program).Assembly.GetName().Version);
