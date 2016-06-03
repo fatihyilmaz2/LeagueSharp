@@ -592,7 +592,14 @@ namespace Slutty_Veigar
             switch (GetStringValue("useemode"))
             {
                 case 0:
-                    E.Cast(extendpos);
+                    if (player.CountEnemiesInRange(E.Range + 175) <= 1)
+                {
+                    var targE = E.GetPrediction(target);
+                    var pos = targE.CastPosition;
+                    if (pos.IsValid() && pos.Distance(player.Position) < E.Range &&
+                        targE.Hitchance >= HitChance.VeryHigh)
+                    {
+                        E.Cast(edge ? pos.Extend(player.Position, 375) : pos, config.Item("packets").GetValue<bool>());
                     break;
             }
 
